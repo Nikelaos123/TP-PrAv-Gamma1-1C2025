@@ -1,4 +1,3 @@
-
 public class Matriz {
 
     private int data[][];
@@ -15,7 +14,17 @@ public class Matriz {
         this.data = otra.getData();
     }
 
-    private int[][] getData() {
+    public int[][] getData() {
         return data.clone();
+    }
+
+    public void mostrarMatriz() {
+
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[i].length; j++) {
+                System.out.println("[" + data[i][j] + "]");
+            }
+        }
+
     }
 }
