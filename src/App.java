@@ -22,6 +22,10 @@ public class App {
         m2.mostrarMatriz();
 
 
+    public static void main(String[] args) throws IOException {
+        Imagen im1 = new Imagen(".\\im\\1.pgm");
+
+        im1.guardarImg(im1.cambiarEscala(3));
     }
 
 }
