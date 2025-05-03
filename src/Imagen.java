@@ -92,12 +92,16 @@ public class Imagen {
                 // Coordenadas proporcionales en la imagen original
                 float yOriginal = (float) y / (nuevoAlto - 1) * (altoOriginal - 1);
                 float xOriginal = (float) x / (nuevoAncho - 1) * (anchoOriginal - 1);
-
+            
+                // Coordenadas previas y posteriores, verificando límites con .min() 
+                // y .floor() para evitar redondear hacia abajo, con el fin de referenciar posteriormente
                 int y0 = (int) Math.floor(yOriginal);
                 int x0 = (int) Math.floor(xOriginal);
                 int y1 = Math.min(y0 + 1, altoOriginal - 1);
                 int x1 = Math.min(x0 + 1, anchoOriginal - 1);
 
+                // Diferencias entre coordenadas originales y enteras
+                // 
                 float dy = yOriginal - y0;
                 float dx = xOriginal - x0;
 
@@ -108,7 +112,11 @@ public class Imagen {
 
                 float R1 = (1 - dx) * Q11 + dx * Q21;
                 float R2 = (1 - dx) * Q12 + dx * Q22;
+
                 float P = (1 - dy) * R1 + dy * R2;
+
+                //Formula: (1 - dy) * (1 - dx) * Q11 + (1 - dy) * dx * Q21  + 
+                //            dy    * (1 - dx) * Q12 +    dy    * dx * Q22
 
                 escalada[y][x] = Math.round(P);
             }
