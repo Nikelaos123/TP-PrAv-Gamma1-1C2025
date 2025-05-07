@@ -9,6 +9,13 @@
       "name": "App",
       "request": "launch",
       "mainClass": "App",
+      "projectName": "TP-PrAv-Gamma1-1C2025_fe68dd2f"
+    },
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "App",
       "projectName": "TP-PrAv-Gamma1-1C2025_b90197c1"
     },
     {
