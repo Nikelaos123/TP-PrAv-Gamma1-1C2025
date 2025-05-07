@@ -6,10 +6,8 @@ public class App {
 
         Imagen im1 = new Imagen(".\\im\\1.pgm");
 
-        im1.guardarImg(im1.cambiarEscala(2));
+        im1.guardarImg(im1.cambiarEscala(0.5));
 
-
-        
     }
 
 }
