@@ -136,7 +136,7 @@ public class Imagen {
              PrintWriter out = new PrintWriter(fos)) {
             // Escribir header
             out.println(this.magic);
-            out.println("# Imagen guardada");
+            out.println("# feep.pgm");
             out.println(ancho + " " + alto);
             out.println(this.maxValor);
             out.flush(); // Asegurarse que el header esta escrito antes que los datos binarios
